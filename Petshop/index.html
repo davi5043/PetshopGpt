@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PetLux Studio - Premium Pet Care</title>
+<link rel="stylesheet" href="style/style.css"/>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🐾 PetLux Studio</div>
+
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#agendar">Agendar</a>
+  </nav>
+
+  <div class="cart" onclick="toggleCart()">
+    🛒 <span id="cartCount">0</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Cuidado Premium para Pets Exigentes</h1>
+    <p>Banho, tosa e produtos premium com experiência de luxo.</p>
+    <button onclick="document.getElementById('agendar').scrollIntoView()" class="btn">Agendar Agora</button>
+  </div>
+</section>
+
+
+<section id="servicos">
+<h2>Serviços Premium</h2>
+
+<div class="grid">
+
+  <div class="card service">
+    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" />
+    <h3>Banho Spa Relaxante</h3>
+    <p>⏱ 1h</p>
+  </div>
+
+  <div class="card service highlight">
+    <span class="badge">MAIS VENDIDO</span>
+    <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8"/>
+    <h3>Banho + Tosa Higiênica</h3>
+    <p>⏱ 1h30</p>
+  </div>
+
+  <div class="card service">
+    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16"/>
+    <h3>Tosa Estética Premium</h3>
+    <p>⏱ 2h</p>
+  </div>
+
+</div>
+</section>
+
+
+<section id="produtos">
+<h2>Produtos Premium</h2>
+
+<div class="grid">
+
+  <div class="card product">
+    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97"/>
+    <h3>Shampoo Pet Lux</h3>
+    <p>R$ 49,90</p>
+    <button onclick="addToCart('Shampoo Pet Lux', 49.90)">Adicionar</button>
+  </div>
+
+  <div class="card product">
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb"/>
+    <h3>Ração Super Premium</h3>
+    <p>R$ 189,90</p>
+    <button onclick="addToCart('Ração Super Premium', 189.90)">Adicionar</button>
+  </div>
+
+
+  <div class="card product">
+    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1"/>
+    <h3>Escova Profissional</h3>
+    <p>R$ 29,90</p>
+    <button onclick="addToCart('Escova Pet', 29.90)">Adicionar</button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="agendar">
+<h2>Agendamento Completo</h2>
+
+<div class="form">
+
+  <input id="pet" placeholder="Nome do Pet"/>
+  <input id="owner" placeholder="Nome do Tutor"/>
+
+  <select id="porte">
+    <option>Porte Pequeno</option>
+    <option>Porte Médio</option>
+    <option>Porte Grande</option>
+  </select>
+
+  <select id="service">
+    <option>Banho Spa</option>
+    <option>Banho + Tosa</option>
+    <option>Tosa Completa</option>
+  </select>
+
+  <input id="phone" placeholder="Telefone"/>
+  <input id="date" type="date"/>
+  <input id="time" type="time"/>
+
+  <textarea id="obs" placeholder="Observações do pet"></textarea>
+
+  <button class="btn" onclick="agendar()">Confirmar Agendamento</button>
+
+</div>
+</section>
+
+
+<div id="cartPanel" class="cartPanel">
+  <h3>Carrinho</h3>
+  <div id="cartItems"></div>
+  <p id="total"></p>
+  <button onclick="clearCart()">Limpar</button>
+</div>
+
+<script src="script/script.js"></script>
+</body>
+</html>
