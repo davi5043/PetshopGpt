@@ -125,4 +125,4 @@ Demonstrar habilidades em:
 - JavaScript interativo  
 - Estrutura de produto escalável  
 - UX profissional de startup
-- 
+  
